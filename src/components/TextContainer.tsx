@@ -2,10 +2,9 @@ import React from "react";
 
 type TextProps = {
     srImage: string | null;
-    ocrText: string | null;
 };
-export default function TextContainer({srImage, ocrText}: TextProps) {
 
+export default function TextContainer({srImage}: TextProps) {
     const handleDownloadClick = async () => {
         const image = new Image();
         if (srImage !== null) {
@@ -27,11 +26,10 @@ export default function TextContainer({srImage, ocrText}: TextProps) {
                 }
             }
         }
-
     }
+
     return (
         <div className="text-container">
-            <textarea value={ocrText || "Result of running ocr..."} readOnly></textarea>
             <button className="item" onClick={handleDownloadClick}> Save image</button>
         </div>
     );

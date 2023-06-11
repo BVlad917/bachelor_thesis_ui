@@ -14,26 +14,30 @@ export async function getSuperResolutionImage(image: File | null, model: string)
 
 }
 
-export async function getOcrText(image: string | null, model: string): Promise<string> {
+export async function getOcr(image: string | null, model: string): Promise<Record<string, string | number[][] | string[]>> {
     let response = await getFromApi(image, model, OCR_ENDPOINT);
     if (response !== null) {
-        let texts = response.data.text;
-        let confidences = response.data.confidence;
-        let box = response.data.box;
-
-        return response.data.text;
+        const dict = {
+            image: `data:image/png;base64,${response.data.image}`,
+            boxes: response.data.boxes,
+            texts: response.data.texts
+        }
+        return dict;
     }
-    return '';
+    return {};
 }
+
 async function getFromApi(image: File | string | null, model: string, endpoint: string): Promise<AxiosResponse<any> | null> {
     if (image) {
         try {
             const formData = new FormData();
             formData.append("image", image);
             formData.append("model_name", model);
-            return await axios.post(API_URL + endpoint, formData, {
+            const response = await axios.post(API_URL + endpoint, formData, {
                 headers: {"Content-Type": "multipart/form-data"},
             });
+            console.log(response);
+            return response;
         } catch (error) {
             console.error(error);
         }

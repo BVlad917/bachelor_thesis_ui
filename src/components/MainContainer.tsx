@@ -8,7 +8,6 @@ type MainProps = {
     image: File | null;
     srImage: string | null;
     setSRImage: Dispatch<SetStateAction<string | null>>;
-    setOcrText: Dispatch<SetStateAction<string | null>>;
     selectedDisplay: string | null;
 };
 
@@ -17,7 +16,6 @@ export default function MainContainer({
                                           image,
                                           srImage,
                                           setSRImage,
-                                          setOcrText,
                                           selectedDisplay,
                                       }: MainProps) {
 
@@ -26,7 +24,7 @@ export default function MainContainer({
             <SuperResolutionContainer image={image} setSRImage={setSRImage}></SuperResolutionContainer>
             <ImgContainer placeholder={placeholder} image={image} srImage={srImage}
                           selectedDisplay={selectedDisplay}></ImgContainer>
-            <OcrContainer image={image} srImage={srImage} setOcrText={setOcrText}></OcrContainer>
+            <OcrContainer image={image} srImage={srImage}></OcrContainer>
         </div>
     );
 }
