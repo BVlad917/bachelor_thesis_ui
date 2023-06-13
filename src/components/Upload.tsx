@@ -11,6 +11,7 @@ export default function Upload({setImage, setSRImage}: ImageUploaderProps) {
             setImage(files[0]);
             setSRImage(null);
         }
+        event.target.value = '';
     };
     return (
         <div className="upload-container">
