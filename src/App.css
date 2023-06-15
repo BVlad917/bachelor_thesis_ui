@@ -1,9 +1,9 @@
 .App {
-  background-color: #230f09;
+  background-color: #e8e8ef;
   text-align: center;
   display: flex;
   flex-direction: column;
-  color: wheat;
+  color: black;
   height: 100vh;
   justify-content: space-between;
 }
@@ -16,7 +16,7 @@
 }
 
 .header-container {
-  background-color: #2f160c;
+  background-color: #e8e8ef;
   height: 10vh;
   display: flex;
   flex-direction: column;
@@ -31,7 +31,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #331810;
+  background-color: #e8e8ef;
 }
 
 .upload-container {
@@ -42,7 +42,7 @@
 }
 
 .text-container {
-  background-color: #331810;
+  background-color: #e8e8ef;
   height: 10vh;
   display: flex;
   flex-direction: row;
@@ -56,9 +56,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #331d10;
+  background-color: #f6f7ff;
 }
-
 
 .sub-panel-container {
   display: flex;
@@ -76,17 +75,17 @@
 
 .panel-container select {
   width: 8vw;
-  padding-block: 0.5vh;
-  color: wheat;
-  background-color: #834a33;
-  border: 1px solid #9d5a42;
+  padding: 0.8vh;
+  color: #ffffff;
+  background-color: #4361ee;
+  border: 1px solid #2c4eee;
   border-radius: 5px;
 }
 
 
 .btn-container {
   height: 10vh;
-  background-color: #2f150c;
+  background-color: #ffffff;
   display: flex;
   flex-direction: row;
 }
@@ -99,28 +98,28 @@
 button {
   width: 8vw;
   padding-block: 1vh;
-  border: none;
   border-radius: 5px;
-  background-color: #834a33;
-  color: wheat;
+  border: none;
+  background-color: #4361ee;
+  color: white;
   font-size: 1.5vh;
 }
 
 button:hover {
-  background-color: #9d5a42;
+  background-color: #5d92ff;
 }
 
 button:active {
-  background-color: #ad644a;
+  background-color: #3a73ea;
 }
 
 .text-container textarea {
-  background-color: #834a33;
-  color: wheat;
+  background-color: #4361ee;
+  color: white;
   width: 50vw;
   height: 12vh;
   padding: 10px;
-  border: 1px solid #ad644a;
+  border: 1px solid #2f50ee;
   border-radius: 5px;
   overflow: auto;
   resize: none;
@@ -136,9 +135,11 @@ button:active {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: #3b1c14;
+  background-color: #e5e5ef;
   object-fit: contain;
   position: relative;
+  z-index:10;
+  box-shadow: 0px 0px 10px 0px #a3aee5;
 }
 
 .img-container .img {
@@ -179,9 +180,9 @@ input[type=file] {
   justify-content: center;
   --divider-width: 2px;
   --divider-color: rgb(255, 255, 255);
-  --divider-shadow: 0px 0px 5px rgb(41, 140, 0);
+  --divider-shadow: 0px 0px 5px rgb(67, 97, 238);
   --handle-color: rgb(255, 255, 255);
-  --default-handle-shadow: 0px 0px 5px rgb(41, 140, 0);
+  --default-handle-shadow: 0px 0px 5px rgb(67, 97, 238);
 }
 
 .slider:focus {
@@ -205,18 +206,18 @@ input[type=file] {
   padding-block: 1vh;
   border: none;
   border-radius: 5px;
-  background-color: #834a33;
-  color: wheat;
+  background-color: #4361ee;
+  color: white;
   font-size: 1.5vh;
   cursor: pointer;
 }
 
 #select-file-label:hover {
-  background-color: #9d5a42;
+  background-color: #5d92ff;
 }
 
 #select-file-label:active {
-  background-color: #ad644a;
+  background-color: #3a73ea;
 }
 
 .close {
@@ -236,7 +237,7 @@ input[type=file] {
   position: absolute;
   color: #fff;
   padding: 1vh 0.8vw;
-  background: rgba(51, 24, 16, 0.8);
+  background: rgba(0, 0, 0, 0.7);
   transform: translate3d(0%, -60%, 0);
   border-radius: 0.2em;
   pointer-events: none;
@@ -249,9 +250,9 @@ input[type=file] {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(21, 11, 4, 0.8);
+  background-color: rgba(0, 0, 0, 0.85);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
+  z-index: 500;
 }

@@ -13,10 +13,10 @@ function App() {
 
     useEffect(() => {
         const loadImages = async () => {
-            const placeholderImage = require('./images/placeholder3.png') as string;
+            const placeholderImage = require('./images/Layer 1.png') as string;
             const file = await fetch(placeholderImage)
                 .then((res) => res.arrayBuffer())
-                .then((buf) => new File([buf], 'placeholder3.png'));
+                .then((buf) => new File([buf], 'Layer 1.png'));
             setPlaceholder(file);
         };
         loadImages();

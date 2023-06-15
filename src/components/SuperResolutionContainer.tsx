@@ -32,7 +32,7 @@ export default function SuperResolutionContainer({image, setSRImage}: ImageProps
                             <TailSpin
                                 height="150"
                                 width="150"
-                                color="#4fa94d"
+                                color="#4361ee"
                                 ariaLabel="tail-spin-loading"
                                 radius="1"
                                 wrapperStyle={{}}
